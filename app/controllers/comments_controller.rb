@@ -4,14 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-  #    @comments = Comment.all
-  #  @post = Post.find(params[:post_id])
-  #  @comments = @post.comments
-    if (params[:post_id] == nil)
-       @comments = Comment.all
-    else
-       @comments = Comment.find(:all, :conditions => ["post_id = ?", params[:post_id]])
-    end
+    @comments = Comment.all
   end
 
   # GET /comments/1
